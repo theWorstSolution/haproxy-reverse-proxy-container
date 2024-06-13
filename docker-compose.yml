@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  haproxy:
+    image: thanh-haproxy  # Replace with your image name if building from Dockerfile
+    ports:
+      - "8786:8786"  # Replace ports as needed (host:container)
+      - "8787:8787"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
